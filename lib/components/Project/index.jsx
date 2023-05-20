@@ -13,12 +13,12 @@ export const Project = ({
     githubLink
 }) => {
     return <div className={styles.project}>
-        <Image src={image}/>
+        <Image src={image} alt="project showcase image"/>
         <div className={styles.tech}>
             <span>
                 Stack:
             </span>
-            {techStack.map((tech, i) => <span>{tech + ((i == techStack.length - 1) ? "" : ", ")}</span>)}
+            {techStack.map((tech, i) => <span key={tech}>{tech + ((i == techStack.length - 1) ? "" : ", ")}</span>)}
         </div>
         <div className={styles.infos}>
             <h3 className={styles.header}>

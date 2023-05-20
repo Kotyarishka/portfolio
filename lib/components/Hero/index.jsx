@@ -12,7 +12,7 @@ export const Hero = () => {
         <div className={["container", styles.hero].join(" ")}>
             <div className={styles.info}>
                 <h1 className={styles.header}>
-                    Hi there, I'm <span>Danylo</span>.<br />
+                    Hi there, I&apos;m <span>Danylo</span>.<br />
                     I am a <span>full-stack</span> developer.
                 </h1>
                 <h2 className={styles.subheader}>

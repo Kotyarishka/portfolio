@@ -41,6 +41,7 @@ const HeaderLink = ({ title, linkTo = "#", active }) => {
 };
 
 export const Header = () => {
+  const path = usePathname()
   return (
     <nav className={styles.nav}>
       <div className={styles.branding}>
@@ -55,7 +56,7 @@ export const Header = () => {
               key={title.toLowerCase()}
               title={title}
               linkTo={linkTo}
-              active={activeHandler(usePathname())}
+              active={activeHandler(path)}
             />
           );
         })}
