@@ -1,0 +1,55 @@
+.quote {
+    position: relative;
+    
+    border: 1px solid #ABB2BF;
+    padding: 32px;
+
+    width: 90%;
+    margin: 0 auto;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    margin-bottom: 8rem;
+}
+
+.quoteL, .quoteR {
+    position: absolute;
+    fill: #ABB2BF;
+    background-color: #282C33;
+    box-sizing: content-box;
+    padding: 4px 8px;
+
+    font-size: 48px;
+
+    z-index: 50;
+}
+
+.quoteL {
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+}
+
+.quoteR {
+    bottom: 0;
+    right: 25px;
+    transform: translateY(50%);
+}
+
+.author {
+    position: absolute;
+    
+    border: 1px solid #ABB2BF;
+    padding: 1.5rem 1.5rem;
+
+    right: -1px;
+    top: 100%;
+
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.author span {
+    z-index: 100;
+}

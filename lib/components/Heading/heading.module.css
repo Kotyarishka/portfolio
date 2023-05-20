@@ -1,0 +1,22 @@
+.heading {
+    font-size: 32px;
+    font-weight: 500;
+
+    position: relative;
+}
+
+.heading::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    top: 50%;
+    margin-left: 1rem;
+
+    background: linear-gradient(90deg, rgba(126,247,255,1) 0%, rgba(40,44,51,1) 100%);
+    transform: translateY(-50%);
+}
+
+.heading span {
+    color: #7EF7FF;
+}

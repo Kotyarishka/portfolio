@@ -1,95 +1,69 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Link from "next/link";
+
+import { Hero } from "@/lib/components/Hero";
+import { Quote } from "@/lib/components/Quote";
+
+import { RiExternalLinkFill } from "react-icons/ri";
+
+import styles from "./page.module.css";
+import { Heading } from "@/lib/components/Heading";
+import { Project } from "@/lib/components/Project";
+
+import LoadingScreen1 from "./imgs/loading_screen_1.png";
+import Terminal from "./imgs/terminal.png";
+import GamemodeCharSys from "./imgs/gamemode.jpg";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <Hero />
+
+      <div className="container">
+        <Quote author={"SallyBot, 2023"}>
+          <p>
+            Encrypted communication is not as secure as unencrypted
+            communication since enctyption can be broken with enough computing
+            power.
+          </p>
+          <Link
+            href={"https://youtu.be/KM4a7RGG270?t=63"}
+            alt="source of the quote"
+            className={styles.externalLink}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            source <RiExternalLinkFill />
+          </Link>
+        </Quote>
+      </div>
+
+      <div className="container">
+        <Heading text="projects/recent" />
+        <div className={styles.projects}>
+          <Project
+            image={Terminal}
+            title={"Terminal"}
+            description={
+              "Custom utility library. Comes with pre-build UI components."
+            }
+            techStack={["Lua", "FontAwesome"]}
+            docsLink={"https://docs.multiverse-project.com/terminal"}
+            githubLink={"https://github.com/MULTIVERSE-Project/terminal"}
+          />
+          <Project
+            image={LoadingScreen1}
+            title={"Loading Screen"}
+            description={
+              "Loading screen for GMod server called The Highest Republic."
+            }
+            techStack={["HTML", "CSS", "JavaScript"]}
+          />
+          <Project
+            image={GamemodeCharSys}
+            title={"Character System"}
+            description={"Custom character system, for custom GMod gamemode."}
+            techStack={["Lua", "MySQL"]}
+          />
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </>
+  );
 }

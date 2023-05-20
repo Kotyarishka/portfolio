@@ -1,0 +1,54 @@
+.button {
+    padding: 0.7rem 2rem;
+    transition: all .2s ease-in-out;
+
+    cursor: pointer;
+    text-decoration: underline;
+
+    border: none;
+    margin: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.icon {
+    display: contents;
+}
+
+.button svg {
+    font-size: 130%;
+}
+
+.primary {
+    border: 1px solid #7EF7FF
+}
+.primary:hover {
+    background-color: #7EF7FF33;
+}
+
+.secondary {
+    border: 1px solid #ABB2BF
+}
+.secondary:hover {
+    background: rgba(171, 178, 191, 0.2);
+}
