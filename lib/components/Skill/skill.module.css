@@ -1,0 +1,49 @@
+.skillGroup {
+    border: 1px solid #ABB2BF;
+    /* padding: 0 8px; */
+
+    display: flex;
+    flex-direction: column;
+
+    transition: border-color .2s ease-in-out;
+}
+
+.skillGroup:hover,
+.skillGroup:hover p{
+    border-color: #7EF7FF;
+}
+
+body:has(.skillGroup:hover) .skillGroup:not(:hover) p {
+    color: #ABB2BF;
+
+}
+
+.skillGroup p {
+    padding: 8px;
+    border-bottom: 1px solid #ABB2BF;
+
+    transition: color .2s ease-in-out;
+    
+    font-weight: 600;
+}
+
+.skillGroup > div {
+    padding: 8px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+.skill {
+    color: #ABB2BF;
+    transition: color .2s ease-in-out;
+
+    cursor: default;
+}
+
+.skill:hover {
+    color: #fff;
+}

@@ -7,15 +7,15 @@
     width: 90%;
     margin: 0 auto;
 
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
 
-    margin-bottom: 8rem;
+    margin-bottom: 7rem;
 }
 
 .quoteL, .quoteR {
     position: absolute;
-    fill: #ABB2BF;
+    fill: #7EF7FF;
     background-color: #282C33;
     box-sizing: content-box;
     padding: 4px 8px;

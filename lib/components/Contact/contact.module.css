@@ -1,0 +1,61 @@
+.contactGroup {
+    border: 1px solid #ABB2BF;
+    /* padding: 0 8px; */
+
+    display: flex;
+    flex-direction: column;
+
+    transition: border-color .2s ease-in-out;
+}
+
+.contactGroup:hover,
+.contactGroup:hover p{
+    border-color: #7EF7FF;
+}
+
+body:has(.contactGroup:hover) .contactGroup:not(:hover) p {
+    color: #ABB2BF;
+
+}
+
+.contactGroup p {
+    padding: 8px;
+    border-bottom: 1px solid #ABB2BF;
+
+    transition: color .2s ease-in-out;
+    
+    font-weight: 600;
+}
+
+.contactGroup > div {
+    padding: 8px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+.contact {
+    color: #ABB2BF;
+    fill: #ABB2BF;
+
+    transition: color .2s ease-in-out, fill .2s ease-in-out;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+    font-size: 16px;
+}
+
+.contact svg {
+    fill: inherit;
+    font-size: 24px;
+}
+
+.contact:hover {
+    color: #fff;
+    fill: #fff;
+}

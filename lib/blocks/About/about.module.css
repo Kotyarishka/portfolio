@@ -1,0 +1,46 @@
+.photo {
+    position: relative;
+    z-index: 99;
+
+    margin: 2rem 0;
+}
+
+.photo :nth-child(1) {
+    position: relative;
+}
+.photo :nth-child(2) {
+    width: auto;
+    height: 450px;
+
+    position: absolute;
+
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 1;
+}
+
+.grid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 10rem;
+    align-items: center;
+    grid-template-columns: 1fr 300px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.infos span {
+    color: #7ef7ff;
+    font-weight: 800;
+}
+
+.infos p {
+    color: #ABB2BF;
+}

@@ -18,11 +18,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-
+    padding: 8px 8px;
+    
     border-top: 1px solid #ABB2BF;
     border-bottom: 1px solid #ABB2BF;
-
-    padding: 8px 8px;
 }
 
 .tech span:nth-child(1) {
@@ -49,9 +48,10 @@
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
     gap: 5px;
-    flex-wrap: wrap;
 }
 
 .header {

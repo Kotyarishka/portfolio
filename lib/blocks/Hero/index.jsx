@@ -5,7 +5,7 @@ import styles from "./hero.module.css"
 
 import MeBackgroundImage from "./meBackground.svg"
 import MeImage from "./me.png"
-import { Button } from "../Button";
+import { Button } from "../../components/Button";
 
 export const Hero = () => {
     return (

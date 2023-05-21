@@ -32,8 +32,6 @@ export const Button = ({leftIcon, rightIcon, linkTo, style = "primary", ...rest}
     </Link>
   )
 
-  
-  
   return (
       <button className={[styles.button, styles[style]].join(" ")} {...rest}>
         <ButtonContent leftIcon={leftIcon} rightIcon={rightIcon}>

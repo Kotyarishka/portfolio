@@ -3,6 +3,7 @@ import styles from "./project.module.css"
 import { Button } from "../Button";
 
 import {RiEyeFill, RiBook2Fill, RiGithubFill} from "react-icons/ri"
+import {AiFillEye} from "react-icons/ai"
 
 export const Project = ({
     image,
@@ -29,12 +30,9 @@ export const Project = ({
             </p>
 
             <div className={styles.buttons}>
-                <Button linkTo={"#"} rightIcon={<RiEyeFill />}>
+                <Button linkTo={"#"} rightIcon={<AiFillEye />}>
                     View
                 </Button>
-                {docsLink && (
-                    <Button linkTo={docsLink} rightIcon={<RiBook2Fill />} target="blank">Docs</Button>
-                )}
                 {githubLink && (
                     <Button linkTo={githubLink} rightIcon={<RiGithubFill />} target="blank">GitHub</Button>
                 )}

@@ -10,11 +10,3 @@
 .externalLink svg {
     font-size: 16px;
 }
-
-.projects {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: start
-}

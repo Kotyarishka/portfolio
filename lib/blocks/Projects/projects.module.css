@@ -1,0 +1,8 @@
+.projects {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+    column-gap: 16px;
+}
