@@ -3,10 +3,16 @@ import { Heading } from "@/lib/components/Heading";
 import styles from "./contacts.module.css";
 import { Contact, ContactGroup } from "@/lib/components/Contact";
 
-import { FaDev, FaDiscord, FaEnvelope, FaInstagram, FaTelegram } from "react-icons/fa";
+import {
+  FaDev,
+  FaDiscord,
+  FaEnvelope,
+  FaInstagram,
+  FaTelegram,
+} from "react-icons/fa";
 import { Button } from "@/lib/components/Button";
 
-import {IoIosPricetag} from "react-icons/io"
+import { IoIosPricetag } from "react-icons/io";
 
 export const Contacts = () => {
   return (
@@ -15,15 +21,19 @@ export const Contacts = () => {
 
       <div className={styles.grid}>
         <div className={styles.infos}>
+          <p>I&apos;m interested in freelance opportunities.</p>
           <p>
-            I&apos;m interested in freelance opportunities. 
+            However, if you have other request or question, don&apos;t hesitate
+            to contact me
           </p>
-          <p>However, if you have
-            other request or question, don&apos;t hesitate to contact me</p>
-            <div><Button linkTo={"/pricing"} noGrow rightIcon={<IoIosPricetag />}>See my pricing</Button></div>
+          {/* <div>
+            <Button linkTo={"/pricing"} noGrow rightIcon={<IoIosPricetag />}>
+              See my pricing
+            </Button>
+          </div> */}
         </div>
         <div className={styles.contacts}>
-        <div>
+          <div>
             <ContactGroup groupName={"Convinient"}>
               <Contact
                 contactText={"kotyarishka@gmail.com"}
@@ -58,7 +68,6 @@ export const Contacts = () => {
               />
             </ContactGroup>
           </div>
-          
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import { Header } from "@/lib/components/Header";
+import { Header } from "@/lib/blocks/Header";
 import { Logo } from "@/lib/components/Logo";
 
 export default function Home() {

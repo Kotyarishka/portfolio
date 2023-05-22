@@ -28,3 +28,10 @@
 .heading h2 span {
     color: #7EF7FF;
 }
+
+
+@media only screen and (max-width: 710px) {
+    .heading h2 {
+        --line-width: 0;
+    }
+}

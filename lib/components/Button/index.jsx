@@ -20,7 +20,7 @@ const ButtonContent = ({
   )
 }
 
-export const Button = ({leftIcon, rightIcon, linkTo, style = "primary", noGrow, ...rest}) => {  
+export const Button = ({leftIcon, rightIcon, linkTo, style = "primary", noGrow, className, ...rest}) => {  
   const {children} = rest;
   rest.children = null
 
@@ -29,7 +29,7 @@ export const Button = ({leftIcon, rightIcon, linkTo, style = "primary", noGrow, 
   ]
 
   if (noGrow) buttonStyle.push(styles.noGrow);
-  buttonStyle = buttonStyle.join(" ")
+  buttonStyle = buttonStyle.join(" ") + " " + className
 
   if (linkTo && linkTo != "#") return (
     <Link href={linkTo} className={buttonStyle} {...rest}>

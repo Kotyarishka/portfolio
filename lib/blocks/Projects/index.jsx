@@ -26,15 +26,18 @@ export const Projects = () => {
           image={LoadingScreen1}
           title={"Loading Screen"}
           description={
-            "Loading screen for GMod server called The Highest Republic."
+            "Loading screen for GMod server called The Strongest Batch."
           }
           techStack={["HTML", "CSS", "JavaScript"]}
+
+          viewLink={"https://tsb-loading-screen.vercel.app/"}
         />
         <Project
           image={GamemodeCharSys}
           title={"Character System"}
           description={"Custom character system, for custom GMod gamemode."}
           techStack={["Lua", "MySQL"]}
+          
         />
       </div>
       
