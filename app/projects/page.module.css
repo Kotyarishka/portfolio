@@ -1,0 +1,31 @@
+.projectsHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+}
+
+.projectsContent {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5rem;
+}
+
+.projects {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+    gap: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

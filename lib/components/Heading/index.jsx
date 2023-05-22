@@ -12,3 +12,11 @@ export const Heading = ({ text, linkTo, linkText }) => {
     </div>
   );
 };
+
+export const PageHeading = ({text}) => {
+    return (
+        <div className={styles.heading}>
+            <h1><span>/</span>{text}</h1>
+        </div>
+    )
+}

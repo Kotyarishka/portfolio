@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.heading h1 {
+    font-weight: 600;
+}
+
 .heading h2 {
     font-size: 32px;
     font-weight: 500;
@@ -25,8 +29,10 @@
     transform: translateY(-50%);
 }
 
-.heading h2 span {
+.heading span {
+    font-weight: 500 !important;
     color: #7EF7FF;
+    margin-right: 5px;
 }
 
 

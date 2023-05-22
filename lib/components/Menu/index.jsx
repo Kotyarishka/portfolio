@@ -8,34 +8,14 @@ import styles from "./menu.module.css";
 import { Button } from "../Button";
 import { HiMenuAlt3 } from "react-icons/hi";
 
-const links = [
-  {
-    linkTo: "/",
-    title: "home",
-    activeHandler: (path) => path == "/",
-  },
-  {
-    linkTo: "/projects",
-    title: "projects",
-    activeHandler: (path) => path.includes("/projects"),
-  },
-  {
-    linkTo: "/about-me",
-    title: "about-me",
-    // activeHandler: (path) => path.includes("/projects"),
-  },
-  {
-    linkTo: "/contacts",
-    title: "contacts",
-    // activeHandler: (path) => path.includes("/projects"),
-  },
-];
+import { MenuLinks as links } from "@/lib/constants/links";
 
-export const MenuLink = ({ title, linkTo = "#", active }) => {
+export const MenuLink = ({ title, linkTo = "#", active, onClick }) => {
   return (
     <Link
       href={linkTo}
       className={[styles.link, active ? styles.active : ""].join(" ")}
+      onClick={onClick}
     >
       <span className={styles.hashtag}>#</span>
       {title}
@@ -50,6 +30,9 @@ export const Menu = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
 
   return (
     <>
@@ -65,6 +48,7 @@ export const Menu = () => {
               title={title}
               linkTo={linkTo}
               active={activeHandler(path)}
+              onClick={closeMenu}
             />
           );
         })}

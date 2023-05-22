@@ -2,9 +2,9 @@ import { Heading } from "@/lib/components/Heading";
 import { Project } from "@/lib/components/Project";
 import { Button } from "@/lib/components/Button";
 
-import LoadingScreen1 from "./imgs/loading_screen_1.png";
-import Terminal from "./imgs/terminal.png";
-import GamemodeCharSys from "./imgs/gamemode.jpg";
+import LoadingScreenTSB from "@/lib/imgs/loading_screen_tsb.png";
+import Terminal from "@/lib/imgs/terminal.png";
+import GamemodeCharSys from "@/lib/imgs/gamemode.jpg";
 
 import styles from "./projects.module.css"
 
@@ -23,7 +23,7 @@ export const Projects = () => {
           githubLink={"https://github.com/MULTIVERSE-Project/terminal"}
         />
         <Project
-          image={LoadingScreen1}
+          image={LoadingScreenTSB}
           title={"Loading Screen"}
           description={
             "Loading screen for GMod server called The Strongest Batch."
