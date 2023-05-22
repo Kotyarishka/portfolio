@@ -20,12 +20,19 @@ const ButtonContent = ({
   )
 }
 
-export const Button = ({leftIcon, rightIcon, linkTo, style = "primary", ...rest}) => {  
+export const Button = ({leftIcon, rightIcon, linkTo, style = "primary", noGrow, ...rest}) => {  
   const {children} = rest;
   rest.children = null
 
+  let buttonStyle = [
+    styles.button, styles[style]
+  ]
+
+  if (noGrow) buttonStyle.push(styles.noGrow);
+  buttonStyle = buttonStyle.join(" ")
+
   if (linkTo && linkTo != "#") return (
-    <Link href={linkTo} className={[styles.button, styles[style]].join(" ")} {...rest}>
+    <Link href={linkTo} className={buttonStyle} {...rest}>
       <ButtonContent leftIcon={leftIcon} rightIcon={rightIcon}>
         {children}
       </ButtonContent>
@@ -33,7 +40,7 @@ export const Button = ({leftIcon, rightIcon, linkTo, style = "primary", ...rest}
   )
 
   return (
-      <button className={[styles.button, styles[style]].join(" ")} {...rest}>
+      <button className={buttonStyle} {...rest}>
         <ButtonContent leftIcon={leftIcon} rightIcon={rightIcon}>
           {children}
         </ButtonContent>

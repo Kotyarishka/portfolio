@@ -4,6 +4,9 @@ import styles from "./contacts.module.css";
 import { Contact, ContactGroup } from "@/lib/components/Contact";
 
 import { FaDev, FaDiscord, FaEnvelope, FaInstagram, FaTelegram } from "react-icons/fa";
+import { Button } from "@/lib/components/Button";
+
+import {IoIosPricetag} from "react-icons/io"
 
 export const Contacts = () => {
   return (
@@ -16,7 +19,8 @@ export const Contacts = () => {
             I&apos;m interested in freelance opportunities. 
           </p>
           <p>However, if you have
-            other request or question, don’t hesitate to contact me</p>
+            other request or question, don&apos;t hesitate to contact me</p>
+            <div><Button linkTo={"/pricing"} noGrow rightIcon={<IoIosPricetag />}>See my pricing</Button></div>
         </div>
         <div className={styles.contacts}>
         <div>

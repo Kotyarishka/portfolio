@@ -35,32 +35,35 @@ const HeaderLink = ({ title, linkTo = "#", active }) => {
       href={linkTo}
       className={[styles.link, active ? styles.active : ""].join(" ")}
     >
-      <span className={styles.hashtag}>#</span>{title}
+      <span className={styles.hashtag}>#</span>
+      {title}
     </Link>
   );
 };
 
 export const Header = () => {
-  const path = usePathname()
+  const path = usePathname();
   return (
-    <nav className={styles.nav}>
-      <div className={styles.branding}>
-        <Logo logoStyle="filled" size={16} />
-        <h1>Kotyarishka</h1>
-      </div>
+    <header>
+      <nav className={styles.nav}>
+        <div className={styles.branding}>
+          <Logo logoStyle="filled" size={16} />
+          <h1>Kotyarishka</h1>
+        </div>
 
-      <div className={styles.links}>
-        {links.map(({ linkTo, title, activeHandler = () => false }) => {
-          return (
-            <HeaderLink
-              key={title.toLowerCase()}
-              title={title}
-              linkTo={linkTo}
-              active={activeHandler(path)}
-            />
-          );
-        })}
-      </div>
-    </nav>
+        <div className={styles.links}>
+          {links.map(({ linkTo, title, activeHandler = () => false }) => {
+            return (
+              <HeaderLink
+                key={title.toLowerCase()}
+                title={title}
+                linkTo={linkTo}
+                active={activeHandler(path)}
+              />
+            );
+          })}
+        </div>
+      </nav>
+    </header>
   );
 };

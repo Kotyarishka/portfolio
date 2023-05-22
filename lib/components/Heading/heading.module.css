@@ -9,17 +9,19 @@
     font-weight: 500;
 
     position: relative;
+
+    --line-width: 350px;
 }
 
 .heading h2::after {
     content: "";
     position: absolute;
-    width: 350px;
+    width: var(--line-width);
     height: 2px;
     top: 50%;
     margin-left: 1rem;
 
-    background: linear-gradient(90deg, rgba(126,247,255,1) 0%, rgba(40,44,51,1) 100%);
+    background: linear-gradient(90deg, #7ef7ff 0%, #282c33 100%);
     transform: translateY(-50%);
 }
 

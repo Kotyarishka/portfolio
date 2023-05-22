@@ -31,6 +31,10 @@
     gap: 8px;
 }
 
+.noGrow {
+    width: fit-content;
+}
+
 .icon {
     display: contents;
 }

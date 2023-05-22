@@ -1,0 +1,64 @@
+.footer {
+    padding: 3rem 0;
+    margin-top: 8rem;
+    border-top: 1px solid #ABB2BF;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.infos span a{
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.media h3 {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.media > div {
+    display: flex;
+    gap: 8px;
+    font-size: 32px;
+}
+
+.media svg {
+    fill: #ABB2BF;
+    transition: fill .2s ease-in-out;
+}
+.media a:hover svg {
+    fill: #7ef7ff
+}
+
+.copyright {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.copyright p {
+    color: #ABB2BF;
+    font-size: 14px;
+}
