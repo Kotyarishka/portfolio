@@ -4,15 +4,9 @@ import styles from "./contacts.module.css";
 import { Contact, ContactGroup } from "@/lib/components/Contact";
 
 import {
-  FaDev,
-  FaDiscord,
-  FaEnvelope,
-  FaInstagram,
-  FaTelegram,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import { Button } from "@/lib/components/Button";
-
-import { IoIosPricetag } from "react-icons/io";
 
 export const Contacts = () => {
   return (
@@ -26,13 +20,13 @@ export const Contacts = () => {
             However, if you have other request or question, don&apos;t hesitate
             to contact me
           </p>
-          {/* <div>
-            <Button linkTo={"/pricing"} noGrow rightIcon={<IoIosPricetag />}>
-              See my pricing
+          <div>
+            <Button linkTo={"/contacts"} noGrow leftIcon={<FaPhoneAlt />}>
+              Contact me
             </Button>
-          </div> */}
+          </div>
         </div>
-        <div className={styles.contacts}>
+        {/* <div className={styles.contacts}>
           <div>
             <ContactGroup groupName={"Convinient"}>
               <Contact
@@ -68,7 +62,7 @@ export const Contacts = () => {
               />
             </ContactGroup>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

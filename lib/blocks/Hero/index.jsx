@@ -20,7 +20,7 @@ export const Hero = () => {
                 </h2>
                 <div className={styles.buttons}>
                     <Button linkTo={"/projects"}>Check my work</Button>
-                    <Button linkTo={"#"} style="secondary">Join me on my journey</Button>
+                    {/* <Button linkTo={"#"} style="secondary">Join me on my journey</Button> */}
                 </div>
             </div>
             <div className={styles.photoSection}>

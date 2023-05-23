@@ -20,7 +20,7 @@ import LoadingScreenTSB from "@/lib/imgs/loading_screen_tsb.png";
 import LoadingScreenTHR from "@/lib/imgs/loading_screen_thr.png";
 import LoadingScreenDG from "@/lib/imgs/loading_screen_dg.png";
 
-export default function Home() {
+export default function Projects() {
   return (
     <main className={styles.projectsContent}>
       <div className={["container", styles.projectsHeader].join(" ")}>
