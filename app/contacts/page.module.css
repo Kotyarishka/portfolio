@@ -1,0 +1,81 @@
+.contactsHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+}
+
+.contactsContent {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    margin-top: 2rem;
+
+    align-items: start;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.table > div {
+    border-bottom: 1px solid #ABB2BF;
+    padding-bottom: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.table .name {
+    font-size: 24px;
+}
+
+.table .price {
+    color: #ABB2BF;
+}
+
+.table .price>span {
+    color: #7EF7FF;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.table > div:last-child {
+    border: none;
+}
+
+@media only screen and (max-width: 1020px) {
+    .grid {
+        grid-template-columns: 350px 1fr;
+
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        align-items: stretch;
+
+        gap: 1rem;
+    }
+
+    .table > div {
+        flex-direction: column;
+    }
+}
